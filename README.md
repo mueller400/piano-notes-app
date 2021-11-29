@@ -5,6 +5,8 @@ A small app for learning and memorizing piano sheet music notes. The note will a
 
 ## Download and Installation
 ### Windows 10
+>IMPORTANT NOTE: I haven't issued any code trust certificate. So on execution of the programm, Windows Defender will block it with the warning `Windows protected your PC`. Click on `More info` and on `Run anyway` to start execution.
+
 Download and extract the content of `piano_win10.zip` from releases:
 https://github.com/mueller400/piano-notes-app/releases/tag/v1.0_win10
 ## How to compile
