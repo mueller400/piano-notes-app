@@ -4,7 +4,9 @@
 A small app for learning and memorizing piano sheet music notes. The note will appear randomly and the user has to press the right key on the virtual piano. Under the options menu, the user can choose the range of notes, accidentals and chromatic pitches randomly displayed.
 
 ## Download and Installation
-\<placeholder>
+### Windows 10
+Download and extract the content of `piano_win10.zip` from releases:
+https://github.com/mueller400/piano-notes-app/releases/tag/v1.0_win10
 ## How to compile
 ### Dependencies
 To compile the program the following libraries are needed:
