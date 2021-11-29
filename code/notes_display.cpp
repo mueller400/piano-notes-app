@@ -341,13 +341,16 @@ int notes_display::next_random_note() {
         pitch_offset = program_state_->chromatic_pitches[current_pitch_][(current_note_ - 1) % 7];
 
         // get random accidental
-        if (pitch_offset == 0) {
+        if (pitch_offset == 0 && program_state_->accidentals[5] && program_state_->random_accidentals.size() > 1) {
             // choose accidental without natural accidental
             index = rnd_.get_integer(0, program_state_->random_accidentals.size() - 1);
+            current_accidental_ = program_state_->random_accidentals[index];
+        } else if (pitch_offset == 0 && program_state_->accidentals[5]) {
+            current_accidental_ = 0;
         } else {
             index = rnd_.get_integer(0, program_state_->random_accidentals.size());
+            current_accidental_ = program_state_->random_accidentals[index];
         }
-        current_accidental_ = program_state_->random_accidentals[index];
 
         update_note_position(note_head_, note_stem_, NOTE_ATTRIBUTE::VIOLIN_NOTE, current_note_ - 27 + add_offset, current_accidental_);
     }
@@ -364,13 +367,16 @@ int notes_display::next_random_note() {
         pitch_offset = program_state_->chromatic_pitches[current_pitch_][(current_note_ - 1) % 7];
 
         // get random accidental
-        if (pitch_offset == 0) {
+        if (pitch_offset == 0 && program_state_->accidentals[5] && program_state_->random_accidentals.size() > 1) {
             // choose accidental without natural accidental
             index = rnd_.get_integer(0, program_state_->random_accidentals.size() - 1);
+            current_accidental_ = program_state_->random_accidentals[index];
+        } else if (pitch_offset == 0 && program_state_->accidentals[5]) {
+            current_accidental_ = 0;
         } else {
             index = rnd_.get_integer(0, program_state_->random_accidentals.size());
+            current_accidental_ = program_state_->random_accidentals[index];
         }
-        current_accidental_ = program_state_->random_accidentals[index];
 
         update_note_position(note_head_, note_stem_, NOTE_ATTRIBUTE::BASS_NOTE, current_note_ - 15 + add_offset, current_accidental_);
     }
